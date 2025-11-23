@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.4" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymposkc9822.controller.PagosController">
+   <items>
+      <VBox alignment="TOP_CENTER" spacing="20.0">
+         <padding><Insets bottom="20" left="20" right="20" top="30" /></padding>
+         <children>
+            <Label text="Caja / Cobros" textFill="#2c3e50">
+               <font><Font name="System Bold" size="24.0" /></font>
+            </Label>
+            
+            <VBox alignment="CENTER_LEFT" spacing="5">
+                <Label text="Seleccionar Cliente a Cobrar:" />
+                <ComboBox fx:id="cmbClientes" prefWidth="300.0" promptText="Buscar Cliente..." />
+            </VBox>
+
+            <Separator />
+            
+            <GridPane hgap="10" vgap="10">
+                <Label text="Plan Actual:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label fx:id="lblPlan" style="-fx-font-weight: bold;" text="---" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                
+                <Label text="Total a Pagar:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label fx:id="lblMonto" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="\$0.00" textFill="#e74c3c" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+            </GridPane>
+            
+            <Button onAction="#realizarCobro" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" text="💳 PROCESAR PAGO" />
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" onAction="#regresarMenu" text="Volver" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+
+      <VBox spacing="10.0">
+         <padding><Insets bottom="10" left="10" right="10" top="10" /></padding>
+         <children>
+            <Label text="Historial de Transacciones Recientes" />
+            <TableView fx:id="tablaHistorial" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="colFecha" prefWidth="100.0" text="Fecha" />
+                <TableColumn fx:id="colCliente" prefWidth="150.0" text="Cliente" />
+                <TableColumn fx:id="colMonto" prefWidth="100.0" text="Monto" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>

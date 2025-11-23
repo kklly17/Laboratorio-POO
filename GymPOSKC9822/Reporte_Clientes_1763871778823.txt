@@ -1,0 +1,32 @@
+=========================================
+       GYMPOS - REPORTE DE CLIENTES      
+       Generado por: Admin Kelly Cano    
+       Fecha: 2025-11-22T22:22:58.827395100
+=========================================
+
+ID         NOMBRE               PLAN                 ESTADO         
+------------------------------------------------------------------
+K89        Kelly Yisseth cano   Mensualidad Básica   ACTIVO         
+I29        Imelda Montiel       Trimestral           ACTIVO         
+C23        Carlo Alberto Castillo Trimestral           ACTIVO         
+E20        Erick Cano           Mensualidad Básica   ACTIVO         
+G89        Gerardo Pérez        Mensualidad Básica   ACTIVO         
+Y63        Yisseth Romero Campos Mensualidad Básica   ACTIVO         
+K01        Karely Jimenez       Semanal              ACTIVO         
+L99        Luisa Peña           Visita Unica         ACTIVO         
+A15        Areli Feria          Anualidad VIP        ACTIVO         
+E56        Elena De la cruz     Mensualidad Básica   ACTIVO         
+B42        Brenda Gutierrez     Visita Unica         ACTIVO         
+M215       Mariana Dominguez    Trimestral           ACTIVO         
+B96        Bruce Montiel        Anualidad VIP        ACTIVO         
+D456       Daniela Fuentes      Semanal              ACTIVO         
+A93        Ana Sifuentes        Anualidad VIP        ACTIVO         
+J08        Juan Hernandez       Semanal              ACTIVO         
+R05        Roberto Mendoza      Mensualidad Básica   ACTIVO         
+T25        Tania Rincon         Mensualidad Básica   ACTIVO         
+P44        Paola Suarez         Trimestral           ACTIVO         
+P63        Penelope Cruz        Anualidad VIP        ACTIVO         
+J64        Javier Bardem        Semanal              ACTIVO         
+
+Total de clientes registrados: 21
+=========================================

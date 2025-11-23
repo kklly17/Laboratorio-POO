@@ -1,0 +1,13 @@
+--- REPORTE FINANCIERO GYMPOS ---
+Ticket: 1CC81C0B | Monto: $450.22
+Ticket: EEE2F514 | Monto: $1200.22
+Ticket: FA90E2E7 | Monto: $50.22
+Ticket: E066E349 | Monto: $1200.22
+Ticket: DE7E216D | Monto: $450.22
+Ticket: 1AC9C550 | Monto: $1200.22
+Ticket: 0490A50B | Monto: $50.22
+Ticket: 9D579A36 | Monto: $4500.22
+Ticket: F561E128 | Monto: $4500.22
+Ticket: D9F58DB8 | Monto: $4500.22
+---------------------------------
+TOTAL INGRESOS: $18102.200000000004

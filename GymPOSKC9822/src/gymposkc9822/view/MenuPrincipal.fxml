@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="558.0" prefWidth="733.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymposkc9822.controller.MenuPrincipalController">
+
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+    </padding>
+    
+    <ImageView fitHeight="116.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@../imagenes/logo.png" />
+        </image>
+        <VBox.margin>
+            <Insets bottom="10.0" />
+        </VBox.margin>
+    </ImageView>
+
+    <Label text="Menú Principal GymPOS" textFill="#2c3e50">
+        <font>
+            <Font name="Century Gothic" size="36.0" />
+        </font>
+      <effect>
+         <InnerShadow />
+      </effect>
+    </Label>
+   <Line endX="318.49285888671875" endY="-1.8637962341308594" fill="#c27317" startX="-100.0" stroke="#d17e20" strokeLineCap="ROUND" strokeWidth="5.0" />
+
+                <Button fx:id="btnClientes" onAction="#irAClientes" prefHeight="38.0" prefWidth="194.0" style="-fx-font-size: 16px; -fx-base: #3498db; -fx-text-fill: white;" text="👥 Gestión de Clientes" />
+
+                            <Button fx:id="btnAcceso" onAction="#irAControlAcceso" prefHeight="38.0" prefWidth="208.0" style="-fx-font-size: 16px; -fx-base: #e67e22; -fx-text-fill: white;" text="⏱ Control de Acceso" />
+
+                      <Button fx:id="btnPagos" onAction="#irAPagos" opacity="0.89" prefHeight="38.0" prefWidth="182.0" style="-fx-font-size: 16px; -fx-base: purple; -fx-text-fill: white;" text="💰 Pagos " />
+    <Button onAction="#generarReporte" prefHeight="42.0" prefWidth="294.0" style="-fx-font-size: 16px; -fx-base: #9b59b6; -fx-text-fill: white;" text="📄 Generar Reporte Clientes (TXT)" />
+    <Button onAction="#generarReporteFinanciero" prefHeight="26.0" prefWidth="290.0" style="-fx-font-size: 16px; -fx-base: #27ae60; -fx-text-fill: white;" text="📈 Generar Reporte Financiero (TXT)" />
+    <Button fx:id="btnSalir" onAction="#cerrarSesion" prefHeight="42.0" prefWidth="206.0" style="-fx-base: #e74c3c; -fx-text-fill: white;" text="🚪 Salir" />
+
+</VBox>

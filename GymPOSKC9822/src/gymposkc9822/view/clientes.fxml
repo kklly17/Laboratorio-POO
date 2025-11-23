@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gymposkc9822.controller.ClientesController">
+   <children>
+      <SplitPane dividerPositions="0.35" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox layoutX="14.0" layoutY="14.0" spacing="15.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="Gestión de Clientes" textFill="#2c3e50">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label text="Datos del Cliente:" />
+                        
+                        <GridPane vgap="10.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="70.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="60.79999999999999" minHeight="10.0" prefHeight="32.7999771118164" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="46.400014877319336" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="46.400014877319336" minHeight="0.0" prefHeight="28.000022888183594" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="ID:" />
+                              <Label text="Nombre:" GridPane.rowIndex="2" />
+                              <Label text="Apellido:" GridPane.rowIndex="3" />
+                              <Label text="Email:" GridPane.rowIndex="4" />
+                              <Label text="Teléfono:" GridPane.rowIndex="5" />
+                              
+                              <TextField fx:id="txtId" promptText="Ej. 1979822" GridPane.columnIndex="1" />
+                              <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Button mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="cmbMembresia" prefWidth="150.0" promptText="Elegir plan" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <Label text="Plan Inicial" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
+                        
+                        <HBox alignment="CENTER" spacing="10.0">
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Button layoutX="27.0" layoutY="419.0" mnemonicParsing="false" onAction="#agregarCliente" prefHeight="18.0" prefWidth="59.0" style="-fx-background-color: #27ae60; -fx-text-fill: white;" text="Agregar" />
+                  <Button layoutX="126.0" layoutY="418.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="26.0" prefWidth="59.0" text="Limpiar" />
+                  <Button layoutX="219.0" layoutY="418.0" mnemonicParsing="false" onAction="#actualizarCliente" style="-fx-background-color: orange; -fx-text-fill: white;" text="Actualizar" />
+                  <Button layoutX="27.0" layoutY="548.0" mnemonicParsing="false" onAction="#regresarMenu" text="Volver" />
+               </children>
+            </AnchorPane>
+            
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <Label text="Listado de Clientes Registrados" />
+                        <TableView fx:id="tablaClientes" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                          <columns>
+                            <TableColumn fx:id="colId" prefWidth="56.79992711544037" text="ID" />
+                            <TableColumn fx:id="colNombre" prefWidth="118.4000244140625" text="Nombre" />
+                              <TableColumn fx:id="colApellido" prefWidth="100.0" text="Apellido" />
+                              <TableColumn fx:id="colEmail" prefWidth="99.199951171875" text="Email" />
+                              <TableColumn fx:id="colTelefono" prefWidth="84.800048828125" text="Teléfono" />
+                              <TableColumn fx:id="colMembresia" prefWidth="137.5999755859375" text="Membresía" />
+                          </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_RIGHT">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#eliminarCliente" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Eliminar Seleccionado" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
